@@ -93,7 +93,7 @@
 cd reserve
 mvn package
 docker image build -t MY-DOCKER ID/reserve:v0.1 .
-docker login
+docker login                     # dockerhub.com에서 로그인하면 12시간정도 유지된다
 docker push MY-DOCKER ID/reserve:v0.1
 
 cd kubernetes
@@ -103,6 +103,7 @@ kubectl apply -f service.yaml
 cd ticket
 mvn package
 docker image build -t MY-DOCKER ID/ticket:v0.1 .
+docker login
 docker push MY-DOCKER ID/ticket:v0.1
 
 cd kubernetes
