@@ -80,7 +80,8 @@
 
 ## Event Storming 결과
 
-![image](https://user-images.githubusercontent.com/487999/79683646-63bfa300-8266-11ea-9bc5-c0b650507ac8.png)
+![image](https://github.com/codellie/sjcu-microservice-labs/assets/126676314/396aa157-ed5f-48fa-ae53-faeea770405a)
+
 
 
 # 구현:
