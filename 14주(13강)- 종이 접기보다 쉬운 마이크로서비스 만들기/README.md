@@ -1,7 +1,6 @@
-# 예제 - 음식배달
+# 영화 예매
 
-![image](https://user-images.githubusercontent.com/487999/79708354-29074a80-82fa-11ea-80df-0db3962fb453.png)
-
+![image](https://github.com/codellie/sjcu-microservice-labs/assets/126676314/5b489b7e-c469-43af-a22d-653a33f63ac7)
 
 본 예제는 마이크로서비스응용및활용 과목의 기말고사 대체용으로 마이크로서비스를 직접 구현하고 쿠버네티스에 배포/운영한 결과 리포트 작성을 위한 가이드입니다.
 
