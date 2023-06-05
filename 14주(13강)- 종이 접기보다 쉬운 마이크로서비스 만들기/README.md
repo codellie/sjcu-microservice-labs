@@ -79,7 +79,7 @@
 
 ## Event Storming 결과
 
-![image](https://github.com/codellie/sjcu-microservice-labs/assets/126676314/396aa157-ed5f-48fa-ae53-faeea770405a)
+![image](https://github.com/codellie/sjcu-microservice-labs/assets/126676314/28e10998-6bde-429e-bdb8-6f0d418e1b20)
 
 
 
