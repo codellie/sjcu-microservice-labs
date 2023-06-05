@@ -85,22 +85,30 @@
 
 # 구현:
 
-분석/설계 단계에서 도출된 헥사고날 아키텍처에 따라, 각 BC별로 대변되는 마이크로 서비스들을 스프링부트와 파이선으로 구현하였다. 구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다 (각자의 포트넘버는 8081 ~ 808n 이다)
+분석/설계 단계에서 도출된 이벤트 스토밍 결과에 따라 예매 서비스와 티켓 서비스를 쿠버네티스에 각각 docker 이미지 생성 및 푸시하며 마이크로서비스를 배포하였다. 구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다
 
 ![image](https://github.com/codellie/sjcu-microservice-labs/assets/126676314/d79f9ff7-f70a-4c1e-9d9c-c704391189f1)
 
 ```
-cd app
-mvn spring-boot:run
+cd reserve
+mvn package
+docker image build -t MY-DOCKER ID/reserve:v0.1 .
+docker login
+docker push MY-DOCKER ID/reserve:v0.1
 
-cd pay
-mvn spring-boot:run 
+cd kubernetes
+kubectl apply -f deployment.yaml # 파일 내 image: MY-DOCKER ID/reserve:v0.1 로 수정
+kubectl apply -f service.yaml
 
-cd store
-mvn spring-boot:run  
+cd ticket
+mvn package
+docker image build -t MY-DOCKER ID/ticket:v0.1 .
+docker push MY-DOCKER ID/ticket:v0.1
 
-cd customer
-python policy-handler.py 
+cd kubernetes
+kubectl apply -f deployment.yaml # 파일 내 image: MY-DOCKER ID/ticket:v0.1 로 수정
+kubectl apply -f service.yaml
+
 ```
 
 ## DDD 의 적용
