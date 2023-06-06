@@ -87,7 +87,7 @@
 
 분석/설계 단계에서 도출된 이벤트 스토밍 결과에 따라 예매 서비스와 티켓 서비스를 쿠버네티스에 각각 docker 이미지 생성 및 푸시하며 마이크로서비스를 배포하였다. 구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다
 
-![image](https://github.com/codellie/sjcu-microservice-labs/assets/126676314/d79f9ff7-f70a-4c1e-9d9c-c704391189f1)
+![image](https://github.com/codellie/sjcu-microservice-labs/assets/126676314/1bc9533f-f27e-43f7-8a00-77c875a8efba)
 
 ```
 cd reserve
