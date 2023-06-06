@@ -110,6 +110,15 @@ cd kubernetes
 kubectl apply -f deployment.yaml # 파일 내 image: MY-DOCKER ID/ticket:v0.1 로 수정
 kubectl apply -f service.yaml
 
+cd point
+mvn package
+docker image build -t MY-DOCKER ID/point:v0.1 .
+docker login
+docker push MY-DOCKER ID/point:v0.1
+
+cd kubernetes
+kubectl apply -f deployment.yaml # 파일 내 image: MY-DOCKER ID/point:v0.1 로 수정
+kubectl apply -f service.yaml
 ```
 
 ## DDD 의 적용
